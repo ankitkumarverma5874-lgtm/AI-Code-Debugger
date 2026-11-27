@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Code Debugger</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">AI Code Debugger</div>
+        <span class="status">● AI Engine Ready</span>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Debug Your Code with AI</h1>
+            <p>Find programming errors, understand their causes,
+               and get corrected Python code instantly.</p>
+        </section>
+
+        <section class="editor-card">
+            <div class="section-heading">
+                <h2>Python Code Editor</h2>
+                <span>Python</span>
+            </div>
+
+            <textarea id="codeInput"
+                placeholder="Paste your Python code here...">age = 25
+message = "Your age is " + age
+print(message)</textarea>
+
+            <button id="debugButton" onclick="debugCode()">
+                Debug Code
+            </button>
+        </section>
+
+        <section class="result-card">
+            <h2>Debugging Results</h2>
+
+            <div id="loading" hidden>
+                AI is analyzing your code...
+            </div>
+
+            <div id="syntaxResult">
+                Your syntax analysis will appear here.
+            </div>
+
+            <pre id="aiResult">Your AI debugging explanation will appear here.</pre>
+        </section>
+    </main>
+
+    <footer>
+        AI Code Debugger | Powered by NVIDIA AI
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+<!-- for running code: uvicorn app.main:app --reload -->
